@@ -79,3 +79,7 @@ class ENTITYCALL(object):
 
 class BLOB(object):
     """"""
+
+
+class Entities(dict):
+    """"""

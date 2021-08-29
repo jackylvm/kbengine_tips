@@ -10,15 +10,7 @@
 # -----------------------------------------------------
 # KBEngine模块提供了逻辑脚本层访问实体的部分, 以及当前space的数据等等.
 import Math
-
-
-class Entities(dict):
-    """"""
-
-    def __init__(self):
-        """"""
-        super(Entities).__init__(self)
-
+import Types
 
 # --------------KBEngine模块的成员属性--------------------------------
 # 这是正运行在当前脚本环境的组件.(至今为止)可能值有'cell', 'base', 'client', 'database', 'bot' 和 'editor'.
@@ -26,7 +18,7 @@ class Entities(dict):
 component = "client"
 
 # entities是一个字典对象,包含当前进程上所有的实体.
-entities = Entities()
+entities = Types.Entities()
 """
     说明:
         entities是一个字典对象,包含当前进程上所有的实体.
