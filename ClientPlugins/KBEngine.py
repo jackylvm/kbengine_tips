@@ -18,23 +18,21 @@ import Types
 component = "client"
 
 # entities是一个字典对象,包含当前进程上所有的实体.
+# 说明:
+#     entities是一个字典对象,包含当前进程上所有的实体.
+#     调试泄露的实体(调用过destroy却没有释放内存的实体,通常是由于被引用导致无法释放):
+#
+#     >>> KBEngine.entities.garbages.items()
+#     [(1025, Avatar object at 0x7f92431ceae8.)]
+#     >>> e = _[0][1]
+#     >>> import gc
+#     >>> gc.get_referents(e)
+#     [{'spacesIsOk': True, 'bootstrapIdx': 1}, ]
+#
+#     调试泄露的KBEngine封装的Python对象:
+#     KBEngine.debugTracing
+#     类型: Entities
 entities = Types.Entities()
-"""
-    说明:
-        entities是一个字典对象,包含当前进程上所有的实体.
-        调试泄露的实体(调用过destroy却没有释放内存的实体,通常是由于被引用导致无法释放):
-        
-        >>> KBEngine.entities.garbages.items()
-        [(1025, Avatar object at 0x7f92431ceae8.)]
-        >>> e = _[0][1]
-        >>> import gc
-        >>> gc.get_referents(e)
-        [{'spacesIsOk': True, 'bootstrapIdx': 1}, ]
-        
-        调试泄露的KBEngine封装的Python对象:
-        KBEngine.debugTracing
-        类型: Entities
-"""
 
 # 实体的uuid,改ID与实体本次登录绑定.当使用重登陆功能时服务端会与此ID进行比对,判断合法性.
 entity_uuid = 0
