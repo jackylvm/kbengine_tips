@@ -13,24 +13,6 @@ import Math
 import Types
 from common import *
 
-
-######辅助类
-class BaseObject(object):
-    pass
-
-
-class ClientObject(object):
-    pass
-
-
-class OtherClientsObject(object):
-    pass
-
-
-class Vector3Object(object):
-    pass
-
-
 ###########################################################################
 # --------------KBEngine模块的成员属性--------------------------------
 LOG_TYPE_DBG = 0
@@ -1370,11 +1352,13 @@ class Entity:
 
         :return:
         """
-    def onUpdateEnd( self ):
+
+    def onUpdateEnd(self):
         """当同步一帧结束时被调用.
 
         :return:
         """
+
     def onWitnessed(self, isWitnessed):
         """如果这个函数在脚本中有实现,如果当前实体进入了另一个绑定了Witness的实体的View范围(也可以理解为一个实体被观察者观察到了),则该实体的回调函数被调用.
 
