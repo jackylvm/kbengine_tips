@@ -73,13 +73,13 @@ class PY_LIST(list):
     """"""
 
 
-class ENTITYCALL(object):
-    """"""
-
-
 class BLOB(object):
     """"""
 
 
 class Entities(dict):
+    """"""
+
+
+class PyClient(list):
     """"""
