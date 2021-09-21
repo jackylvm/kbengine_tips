@@ -46,5 +46,9 @@ class BaseEntityCall(EntityCall):
     """"""
 
 
+class CellEntityCall(EntityCall):
+    """"""
+
+
 class ClientEntityCall(EntityCall):
     """"""
