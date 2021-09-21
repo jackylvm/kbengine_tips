@@ -83,3 +83,7 @@ class Entities(dict):
 
 class PyClient(list):
     """"""
+
+
+class CELLDATADICT(dict):
+    """"""
