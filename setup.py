@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='kbengine_tips',
-    version='0.0.1',
+    version='1.2.0',
     packages=[''],
     url='https://github.com/jackylvm/kbengine_tips',
     license='GPL 3.0',
